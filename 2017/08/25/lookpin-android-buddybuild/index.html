@@ -3,14 +3,44 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Sikeeoh Tech Blog</title>
+  <title>룩핀 안드로이드 Buddybuild 적용기 | Sikeeoh Tech Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sikeeoh Tech Blog">
-<meta property="og:url" content="https://sikeeoh.github.io/index.html">
+  <meta name="description" content="소개안녕하세요?룩핀에서 안드로이드 개발을 혼자 맡고 있는 오경식 이라고 합니다.자세한 소개는 소개링크 로 대체 하겠습니다. 글을 쓰게 된 계기Lookpin 안드로이드 프로젝트에 CI를 붙이려고 알아보던 도중 buddybuild라는 나온지 얼마안되고 따끈따근하고 좋은 서비스(?)라는 걸 알게 되었고 룩핀 안드로이드에 붙이게 되었습니다.그나마 여러 CI서비스중">
+<meta name="keywords" content="buddybuild,안드로이드,배포,룩핀">
+<meta property="og:type" content="article">
+<meta property="og:title" content="룩핀 안드로이드 Buddybuild 적용기">
+<meta property="og:url" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/index.html">
 <meta property="og:site_name" content="Sikeeoh Tech Blog">
+<meta property="og:description" content="소개안녕하세요?룩핀에서 안드로이드 개발을 혼자 맡고 있는 오경식 이라고 합니다.자세한 소개는 소개링크 로 대체 하겠습니다. 글을 쓰게 된 계기Lookpin 안드로이드 프로젝트에 CI를 붙이려고 알아보던 도중 buddybuild라는 나온지 얼마안되고 따끈따근하고 좋은 서비스(?)라는 걸 알게 되었고 룩핀 안드로이드에 붙이게 되었습니다.그나마 여러 CI서비스중">
+<meta property="og:image" content="https://www.buddybuild.com/images/logo-dark@2x.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/signup.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/add-repo.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/add-repo2.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/add-repo4.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/add-repo5.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/add-repo6.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/add-repo7.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/add-repo-github.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/add-repo-github2.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/list.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/build-config.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/test-config.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/slack.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/slack2.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/slack3.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/deploy-group.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/deploy-google-play.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/deploy-mail.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/build-detail.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/build-detail-unittest.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/build-detail-deploy.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/deploy-result.png">
+<meta property="og:image" content="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/css/images/build-fail-email.png">
+<meta property="og:updated_time" content="2017-08-25T09:14:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sikeeoh Tech Blog">
+<meta name="twitter:title" content="룩핀 안드로이드 Buddybuild 적용기">
+<meta name="twitter:description" content="소개안녕하세요?룩핀에서 안드로이드 개발을 혼자 맡고 있는 오경식 이라고 합니다.자세한 소개는 소개링크 로 대체 하겠습니다. 글을 쓰게 된 계기Lookpin 안드로이드 프로젝트에 CI를 붙이려고 알아보던 도중 buddybuild라는 나온지 얼마안되고 따끈따근하고 좋은 서비스(?)라는 걸 알게 되었고 룩핀 안드로이드에 붙이게 되었습니다.그나마 여러 CI서비스중">
+<meta name="twitter:image" content="https://www.buddybuild.com/images/logo-dark@2x.png">
   
     <link rel="alternate" href="/atom.xml" title="Sikeeoh Tech Blog" type="application/atom+xml">
   
@@ -56,9 +86,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-lookpin-android-buddybuild" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-lookpin-android-buddybuild" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/25/lookpin-android-buddybuild/" class="article-date">
   <time datetime="2017-08-25T02:34:58.000Z" itemprop="datePublished">2017-08-25</time>
@@ -71,8 +99,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/25/lookpin-android-buddybuild/">룩핀 안드로이드 Buddybuild 적용기</a>
+    <h1 class="article-title" itemprop="name">
+      룩핀 안드로이드 Buddybuild 적용기
     </h1>
   
 
@@ -135,10 +163,9 @@
     </footer>
   </div>
   
-</article>
-
-
+    
   
+</article>
 
 </section>
         
