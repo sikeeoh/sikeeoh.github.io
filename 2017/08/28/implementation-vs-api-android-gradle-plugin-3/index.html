@@ -3,14 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Sikeeoh Tech Blog</title>
+  <title>Implementation VS Api in Android Gradle Plugin - 번역 | Sikeeoh Tech Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sikeeoh Tech Blog">
-<meta property="og:url" content="https://sikeeoh.github.io/index.html">
+  <meta name="description" content="글에 앞서안녕하세요?룩핀에서 안드로이드 개발을 하고 있는 오경식 이라고 합니다.이 글은 인도 벵갈루루의 Bedanta Bikash Borah님이 Medium에 올린 Implementation Vs Api in Android Gradle plugin 라는 글을 번역해서 만들었습니다.번역하면서 읽으시는 분들이 편하게 느끼기 위해 원글과 아주 약간의 어투 및 기">
+<meta name="keywords" content="android,gradle,compile,implementation,api">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Implementation VS Api in Android Gradle Plugin - 번역">
+<meta property="og:url" content="https://sikeeoh.github.io/2017/08/28/implementation-vs-api-android-gradle-plugin-3/index.html">
 <meta property="og:site_name" content="Sikeeoh Tech Blog">
+<meta property="og:description" content="글에 앞서안녕하세요?룩핀에서 안드로이드 개발을 하고 있는 오경식 이라고 합니다.이 글은 인도 벵갈루루의 Bedanta Bikash Borah님이 Medium에 올린 Implementation Vs Api in Android Gradle plugin 라는 글을 번역해서 만들었습니다.번역하면서 읽으시는 분들이 편하게 느끼기 위해 원글과 아주 약간의 어투 및 기">
+<meta property="og:image" content="https://sikeeoh.github.io/css/images/20170828/sure.png">
+<meta property="og:image" content="https://sikeeoh.github.io/css/images/20170828/1.png">
+<meta property="og:image" content="https://sikeeoh.github.io/css/images/20170828/dependency_tree.png">
+<meta property="og:image" content="https://sikeeoh.github.io/css/images/20170828/sample_app_access_library.png">
+<meta property="og:image" content="https://sikeeoh.github.io/css/images/20170828/app_module_access_error.png">
+<meta property="og:image" content="https://sikeeoh.github.io/css/images/20170828/first_scenario.png">
+<meta property="og:image" content="https://sikeeoh.github.io/css/images/20170828/second_scenario.png">
+<meta property="og:image" content="https://sikeeoh.github.io/css/images/20170828/full_build.png">
+<meta property="og:image" content="https://sikeeoh.github.io/css/images/20170828/change_in_libraryd.png">
+<meta property="og:image" content="https://sikeeoh.github.io/css/images/20170828/change_in_libraryc.png">
+<meta property="og:updated_time" content="2017-08-28T08:31:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sikeeoh Tech Blog">
+<meta name="twitter:title" content="Implementation VS Api in Android Gradle Plugin - 번역">
+<meta name="twitter:description" content="글에 앞서안녕하세요?룩핀에서 안드로이드 개발을 하고 있는 오경식 이라고 합니다.이 글은 인도 벵갈루루의 Bedanta Bikash Borah님이 Medium에 올린 Implementation Vs Api in Android Gradle plugin 라는 글을 번역해서 만들었습니다.번역하면서 읽으시는 분들이 편하게 느끼기 위해 원글과 아주 약간의 어투 및 기">
+<meta name="twitter:image" content="https://sikeeoh.github.io/css/images/20170828/sure.png">
   
     <link rel="alternate" href="/atom.xml" title="Sikeeoh Tech Blog" type="application/atom+xml">
   
@@ -56,9 +72,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-implementation-vs-api-android-gradle-plugin-3" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-implementation-vs-api-android-gradle-plugin-3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/28/implementation-vs-api-android-gradle-plugin-3/" class="article-date">
   <time datetime="2017-08-28T08:23:49.000Z" itemprop="datePublished">2017-08-28</time>
@@ -71,8 +85,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/28/implementation-vs-api-android-gradle-plugin-3/">Implementation VS Api in Android Gradle Plugin - 번역</a>
+    <h1 class="article-title" itemprop="name">
+      Implementation VS Api in Android Gradle Plugin - 번역
     </h1>
   
 
@@ -143,91 +157,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-lookpin-android-buddybuild" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/08/25/lookpin-android-buddybuild/" class="article-date">
-  <time datetime="2017-08-25T02:34:58.000Z" itemprop="datePublished">2017-08-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/25/lookpin-android-buddybuild/">룩핀 안드로이드 Buddybuild 적용기 그리고 여러분도 적용해보자</a>
-    </h1>
+    <a href="/2017/08/25/lookpin-android-buddybuild/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">룩핀 안드로이드 Buddybuild 적용기 그리고 여러분도 적용해보자</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="소개"><a href="#소개" class="headerlink" title="소개"></a>소개<hr></h2><p>안녕하세요?<br>룩핀에서 안드로이드 개발을 혼자 맡고 있는 오경식 이라고 합니다.<br>자세한 소개는 <a href="https://gist.github.com/sikeeoh/468a5818060b188e26b4fb9f3da1a4d4" target="_blank" rel="external">소개링크</a> 로 대체 하겠습니다.</p>
-<h2 id="글을-쓰게-된-계기"><a href="#글을-쓰게-된-계기" class="headerlink" title="글을 쓰게 된 계기"></a>글을 쓰게 된 계기<hr></h2><p><strong>Lookpin 안드로이드</strong> 프로젝트에 CI를 붙이려고 알아보던 도중 <a href="https://www.buddybuild.com/" target="_blank" rel="external">buddybuild</a>라는 나온지 얼마안되고 따끈따끈하고 좋은 서비스(?)라는 걸 알게 되었고 룩핀 안드로이드에 붙이게 되었습니다.<br>그나마 여러 CI서비스중 최근에 출시되고 규모가 있고 어느정도 검증된 서비스인 것 같지만 최근에 출시해서 그런지 워낙 자료가 부족 하고 한번 쯤 정리하는 것도 나쁘지 않을 것 같아서 적게 되었습니다.</p>
-<p><strong>저장소 관련 내용은 Github 기준으로 작성 되었습니다.</strong></p>
-<h2 id="buddybuild-란"><a href="#buddybuild-란" class="headerlink" title="buddybuild 란?"></a>buddybuild 란?<hr></h2><p><a href="https://www.buddybuild.com/" target="_blank" rel="external"><br><img src="https://www.buddybuild.com/images/logo-dark@2x.png"><br></a></p>
-<h3 id="홈페이지-소개"><a href="#홈페이지-소개" class="headerlink" title="홈페이지 소개"></a>홈페이지 소개</h3><ul>
-<li>Ship apps faster with<br>A continuous integration, continuous deployment, and user feedback platform for iOS and Android development teams.</li>
-</ul>
-<p><strong>지속적인 통합 및 배포 그리고 사용자 피드백을 위한 플랫폼 서비스 입니다.</strong></p>
-<h2 id="Repository-추가"><a href="#Repository-추가" class="headerlink" title="Repository 추가"></a>Repository 추가<hr></h2><h3 id="회원-가입"><a href="#회원-가입" class="headerlink" title="- 회원 가입"></a>- 회원 가입</h3><h5 id="1-회원가입을-합시다"><a href="#1-회원가입을-합시다" class="headerlink" title="1. 회원가입을 합시다."></a>1. 회원가입을 합시다.</h5><p><img src="/css/images/signup.png" alt=""></p>
-<h3 id="Repository-추가-Github-Organization-Repo"><a href="#Repository-추가-Github-Organization-Repo" class="headerlink" title="- Repository 추가 (Github Organization Repo)"></a>- Repository 추가 (Github Organization Repo)</h3><h5 id="1-Organization에-있는-Repo-같은경우-Add-a-with-SSH를-이용해서-등록해야-합니다"><a href="#1-Organization에-있는-Repo-같은경우-Add-a-with-SSH를-이용해서-등록해야-합니다" class="headerlink" title="1. Organization에 있는 Repo 같은경우 Add a with SSH를 이용해서 등록해야 합니다."></a>1. Organization에 있는 Repo 같은경우 <strong>Add a with SSH</strong>를 이용해서 등록해야 합니다.</h5><h5 id="Github-com을-통해-진행-할-경우-Repository-List에는-개인의-저장소-밖에-안뜨기-때문-입니다"><a href="#Github-com을-통해-진행-할-경우-Repository-List에는-개인의-저장소-밖에-안뜨기-때문-입니다" class="headerlink" title="Github.com을 통해 진행 할 경우 Repository List에는 개인의 저장소 밖에 안뜨기 때문 입니다."></a>Github.com을 통해 진행 할 경우 Repository List에는 개인의 저장소 밖에 안뜨기 때문 입니다.</h5><p><img src="/css/images/add-repo.png" alt=""></p>
-<h5 id="2-ssh-key를-추가해줍시다"><a href="#2-ssh-key를-추가해줍시다" class="headerlink" title="2. ssh-key를 추가해줍시다."></a>2. ssh-key를 추가해줍시다.</h5><p><img src="/css/images/add-repo2.png" alt=""></p>
-<h5 id="3-진행중"><a href="#3-진행중" class="headerlink" title="3. 진행중."></a>3. 진행중.</h5><p><img src="/css/images/add-repo4.png" alt=""></p>
-<h5 id="4-등록-중-Build가-Fail난-경우-Build가-통과-될-수-있게-프로젝트-수정해주세요"><a href="#4-등록-중-Build가-Fail난-경우-Build가-통과-될-수-있게-프로젝트-수정해주세요" class="headerlink" title="4. 등록 중 Build가 Fail난 경우 Build가 통과 될 수 있게 프로젝트 수정해주세요."></a>4. 등록 중 Build가 Fail난 경우 Build가 통과 될 수 있게 프로젝트 수정해주세요.</h5><p><img src="/css/images/add-repo5.png" alt=""></p>
-<h5 id="5-Build가-성공한경우"><a href="#5-Build가-성공한경우" class="headerlink" title="5. Build가 성공한경우"></a>5. Build가 성공한경우</h5><p><img src="/css/images/add-repo6.png" alt=""><br><img src="/css/images/add-repo7.png" alt=""></p>
-<h3 id="Repository-추가-My-Repository"><a href="#Repository-추가-My-Repository" class="headerlink" title="- Repository 추가 (My Repository)"></a>- Repository 추가 (My Repository)</h3><p><img src="/css/images/add-repo-github.png" alt=""><br><img src="/css/images/add-repo-github2.png" alt=""></p>
-<h2 id="설정"><a href="#설정" class="headerlink" title="설정"></a>설정<hr></h2><h3 id="Dashboard"><a href="#Dashboard" class="headerlink" title="- Dashboard"></a>- Dashboard</h3><p><img src="/css/images/list.png" alt=""></p>
-<h3 id="Adding-a-Github-Webhook"><a href="#Adding-a-Github-Webhook" class="headerlink" title="- Adding a Github Webhook"></a>- Adding a Github Webhook</h3><p>Organization Repo 이신 분 들은 Webhook을 설정하라고 나올 겁니다.<br>Webhook은 buddybuild에게 repository에 대한 코드 변경 사항을 알립니다.<br>새로운 변경 사항이 푸시 될 때마다 buddybuild가 자동으로 새 빌드를 시작하여 최신 빌드 상태를 유지 하도록합니다.</p>
-<p><a href="https://docs.buddybuild.com/repository/github/webhook.html" target="_blank" rel="external">Adding a Github Webhook docs</a></p>
-<h3 id="App-Setting"><a href="#App-Setting" class="headerlink" title="- App Setting"></a>- App Setting</h3><p>App Setting 쪽은 자신에게 맞게 설정 해주시면 됩니다.</p>
-<h5 id="빌드-조건-및-빌드-관련-각종-설정"><a href="#빌드-조건-및-빌드-관련-각종-설정" class="headerlink" title="빌드 조건 및 빌드 관련 각종 설정"></a>빌드 조건 및 빌드 관련 각종 설정</h5><p><img src="/css/images/build-config.png" alt=""></p>
-<h5 id="테스트-관련-설정"><a href="#테스트-관련-설정" class="headerlink" title="테스트 관련 설정"></a>테스트 관련 설정</h5><p>각 브랜치별로 테스트들을 어떻게 구성해서 진행할지 설정 할 수 있고<br>UI Test 나 Unit Test 등등 설정 할 수 있습니다.<br>실제 디바이스로 하는 UI Test는 돈이 드니.. 잘 선택 해 주시길 바랍니다.</p>
-<p><img src="/css/images/test-config.png" alt=""></p>
-<h3 id="Add-Slack"><a href="#Add-Slack" class="headerlink" title="- Add Slack"></a>- Add Slack</h3><p>Build 결과를 Slack 특정 채널에 notify 하고 싶은경우 설정 하면 됩니다.<br>저 같은 경우 모든 브랜치 관련 빌드를 #Commit 채널로 받고 있습니다.</p>
-<p><img src="/css/images/slack.png" alt=""><br><img src="/css/images/slack2.png" alt=""></p>
-<h5 id="Slack-표시"><a href="#Slack-표시" class="headerlink" title="Slack 표시"></a>Slack 표시</h5><p><img src="/css/images/slack3.png" alt=""></p>
-<h2 id="Deploy"><a href="#Deploy" class="headerlink" title="Deploy"></a>Deploy<hr></h2><p>배포 같은 경우 배포그룹을 만들어서 각 그룹마다 조건을 걸어서 배포 할 수 있습니다.<br>예) 특정 브랜치가 빌드 될때마다 , 10시간마다, 수동으로 등등</p>
-<p>배포는 설정해둔 이메일로 배포결과를 보내거나 또는 Google Play로 바로 배포도 가능합니다.<br>저 같은 경우 master 브랜치가 빌드가 성공한 경우에는 buddybuild를 통해 자동으로 google play beta 배포를 진행하며 develop 브랜치 같은경우에는 이메일로 배포를 하여 테스트를 진행 합니다.</p>
-<h5 id="배포그룹"><a href="#배포그룹" class="headerlink" title="배포그룹"></a>배포그룹</h5><p><img src="/css/images/deploy-group.png" alt=""></p>
-<h5 id="구글-플레이-배포-설정"><a href="#구글-플레이-배포-설정" class="headerlink" title="구글 플레이 배포 설정"></a>구글 플레이 배포 설정</h5><p><img src="/css/images/deploy-google-play.png" alt=""></p>
-<h5 id="이메일-배포"><a href="#이메일-배포" class="headerlink" title="이메일 배포"></a>이메일 배포</h5><p><img src="/css/images/deploy-mail.png" alt=""></p>
-<h2 id="Build-Detail"><a href="#Build-Detail" class="headerlink" title="Build Detail"></a>Build Detail<hr></h2><p>빌드 상세 화면 입니다.</p>
-<p><img src="/css/images/build-detail.png" alt=""></p>
-<h5 id="테스트-결과"><a href="#테스트-결과" class="headerlink" title="테스트 결과"></a>테스트 결과</h5><p><img src="/css/images/build-detail-unittest.png" alt=""></p>
-<h5 id="빌드-결과물-배포-배포-그룹-선택해서도-가능"><a href="#빌드-결과물-배포-배포-그룹-선택해서도-가능" class="headerlink" title="빌드 결과물 배포( 배포 그룹 선택해서도 가능 )"></a>빌드 결과물 배포( 배포 그룹 선택해서도 가능 )</h5><p><img src="/css/images/build-detail-deploy.png" alt=""></p>
-<h5 id="빌드-결과물-배포후-테스터들-상태"><a href="#빌드-결과물-배포후-테스터들-상태" class="headerlink" title="빌드 결과물 배포후 테스터들 상태"></a>빌드 결과물 배포후 테스터들 상태</h5><p><img src="/css/images/deploy-result.png" alt=""></p>
-<h5 id="빌드가-실패한-경우-메일"><a href="#빌드가-실패한-경우-메일" class="headerlink" title="빌드가 실패한 경우 메일"></a>빌드가 실패한 경우 메일</h5><p><img src="/css/images/build-fail-email.png" alt=""></p>
-<h2 id="사용한-후기"><a href="#사용한-후기" class="headerlink" title="사용한 후기"></a>사용한 후기<hr></h2><p>유저가 잘 활용 할 수 있도록 구성된 사이트와 설정이 편하고 많은 기능들 그리고 Docs에 반해 buddybuild를 선택했는데 아직까지는 후회가 없습니다.<br>하지만 아직 테스트 코드가 적다보니 제가 계속 노력해 나가야 하는 부분이라고 생각됩니다.<br>그리고 buddybuild에는 많은 기능들이 있는데 아직 그 기능들을 완전히 다 못 쓰는 부분들은 점차 발전해나가고 정리할 수 있는 부분들은 문서로 정리해두려고 합니다.</p>
-<p>그리고 예전 안드로이드의 배포 관련 해서는 매우 수동적 이였습니다.<br>예를들어 테스트 apk 배포를 기기에 하나하나 설치하는 식으로 진행하거나 직원분들의 apk 재설치 요구 등등 이런 요청에 대한 수동적인 대응으로 인해 중간중간 시간을 빼앗기고 집중도 깨지고 그랬습니다.<br>하지만 buddybuild를 통해 배포 자동화와 배포 및 테스트 관련 규칙들도 정리가 돼서 뿌듯해 하고 있습니다.</p>
-<p>아직 CI 나 Deploy 관련 서비스를 적용 하지 않은 기업들이 있다면 적용해보면 좋을 듯 싶습니다.</p>
-<p><strong>생각 보다 그렇게 오래 안걸려요!</strong></p>
-<h2 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론<hr></h2><p>우리모두 간지나게 <strong>BuddyBuild Build status badges</strong> 달아요!</p>
-<h2 id="기타-문의"><a href="#기타-문의" class="headerlink" title="기타 문의"></a>기타 문의<hr></h2><p>혹시 잘못 된 정보나 궁금한 점이 있다면 제 <a href="https://gist.github.com/sikeeoh/468a5818060b188e26b4fb9f3da1a4d4" target="_blank" rel="external">소개링크</a><br>에 있는 메일이나 페이스북 메시지로 문의 주세요!</p>
-<p>감사합니다.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/" data-id="cj6vwnbyx0001e91xlfarxp55" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/buddybuild/">buddybuild</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/룩핀/">룩핀</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/배포/">배포</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/안드로이드/">안드로이드</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
