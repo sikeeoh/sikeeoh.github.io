@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Sikeeoh Tech Blog</title>
-  
-  <link href="/atom.xml" rel="self"/>
-  
-  <link href="https://sikeeoh.github.io/"/>
-  <updated>2017-08-28T08:35:34.000Z</updated>
-  <id>https://sikeeoh.github.io/</id>
-  
-  <author>
-    <name>Kyeongsik Oh</name>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sikeeoh Tech Blog</title>
+    <link>https://sikeeoh.github.io/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
-  </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Implementation VS Api in Android Gradle Plugin - 번역</title>
-    <link href="https://sikeeoh.github.io/2017/08/28/implementation-vs-api-android-gradle-plugin-3/"/>
-    <id>https://sikeeoh.github.io/2017/08/28/implementation-vs-api-android-gradle-plugin-3/</id>
-    <published>2017-08-28T08:23:49.000Z</published>
-    <updated>2017-08-28T08:35:34.000Z</updated>
+    <description></description>
+    <pubDate>Mon, 28 Aug 2017 08:35:34 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
     
-    <content type="html"><![CDATA[<h2 id="글에-앞서"><a href="#글에-앞서" class="headerlink" title="글에 앞서"></a>글에 앞서<hr></h2><p>안녕하세요?<br><a href="http://web.lookpin.co.kr/" target="_blank" rel="external">룩핀</a>에서 안드로이드 개발을 하고 있는 <a href="https://gist.github.com/sikeeoh/468a5818060b188e26b4fb9f3da1a4d4" target="_blank" rel="external">오경식</a> 이라고 합니다.<br>이 글은 인도 벵갈루루의 <strong>Bedanta Bikash Borah</strong>님이 Medium에 올린 <a href="https://blog.mindorks.com/implementation-vs-api-in-gradle-3-0-494c817a6fa" target="_blank" rel="external">Implementation Vs Api in Android Gradle plugin</a> 라는 글을 번역해서 만들었습니다.<br>번역하면서 읽으시는 분들이 편하게 느끼기 위해 원글과 아주 약간의 어투 및 기타 차이가 있을 수 있습니다.<br>번역을 흔쾌히 허락해주신 Bedanta Bikash Borah님께 감사하다는 말씀 드립니다.<br>또한 번역이 미흡해 번역의 질이 낮게 느껴질 수 있을텐데 많은 조언 부탁드립니다.<br>부족한 번역 글 읽어주셔서 감사합니다.<br><img src="/css/images/20170828/sure.png" alt="승낙"></p>
+    <item>
+      <title>Implementation VS Api in Android Gradle Plugin - 번역</title>
+      <link>https://sikeeoh.github.io/2017/08/28/implementation-vs-api-android-gradle-plugin-3/</link>
+      <guid>https://sikeeoh.github.io/2017/08/28/implementation-vs-api-android-gradle-plugin-3/</guid>
+      <pubDate>Mon, 28 Aug 2017 08:23:49 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;글에-앞서&quot;&gt;&lt;a href=&quot;#글에-앞서&quot; class=&quot;headerlink&quot; title=&quot;글에 앞서&quot;&gt;&lt;/a&gt;글에 앞서&lt;hr&gt;&lt;/h2&gt;&lt;p&gt;안녕하세요?&lt;br&gt;&lt;a href=&quot;http://web.lookpin.co.kr/&quot; target=&quot;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="글에-앞서"><a href="#글에-앞서" class="headerlink" title="글에 앞서"></a>글에 앞서<hr></h2><p>안녕하세요?<br><a href="http://web.lookpin.co.kr/" target="_blank" rel="external">룩핀</a>에서 안드로이드 개발을 하고 있는 <a href="https://gist.github.com/sikeeoh/468a5818060b188e26b4fb9f3da1a4d4" target="_blank" rel="external">오경식</a> 이라고 합니다.<br>이 글은 인도 벵갈루루의 <strong>Bedanta Bikash Borah</strong>님이 Medium에 올린 <a href="https://blog.mindorks.com/implementation-vs-api-in-gradle-3-0-494c817a6fa" target="_blank" rel="external">Implementation Vs Api in Android Gradle plugin</a> 라는 글을 번역해서 만들었습니다.<br>번역하면서 읽으시는 분들이 편하게 느끼기 위해 원글과 아주 약간의 어투 및 기타 차이가 있을 수 있습니다.<br>번역을 흔쾌히 허락해주신 Bedanta Bikash Borah님께 감사하다는 말씀 드립니다.<br>또한 번역이 미흡해 번역의 질이 낮게 느껴질 수 있을텐데 많은 조언 부탁드립니다.<br>부족한 번역 글 읽어주셔서 감사합니다.<br><img src="/css/images/20170828/sure.png" alt="승낙"></p>
 <h2 id="Implementation-Vs-Api-in-Android-Gradle-plugin-3-0"><a href="#Implementation-Vs-Api-in-Android-Gradle-plugin-3-0" class="headerlink" title="Implementation Vs Api in Android Gradle plugin 3.0"></a>Implementation Vs Api in Android Gradle plugin 3.0<hr></h2><p><img src="/css/images/20170828/1.png" alt=""></p>
 <p>나는 프로젝트에서 Android Gradle 플러그인 3.0을 사용하는 동안 <code>compile</code> 키워드가 Deprecated 되었고  새롭게 나온 <code>implementation</code> 과 <code>api</code>를 위해 더 이상 <code>compile</code>이 추후에 사용되지 않는 것으로 되었습니다.<br>위 두 가지 모두 예제를 통해 이해 해 보도록 하겠습니다.</p>
 <p><em>샘플 어플(kotlin)은 <a href="https://github.com/iamBedant/ApiVsImplementation" target="_blank" rel="external">여기</a>있습니다.</em></p>
@@ -73,35 +73,23 @@
 <h2 id="TL-DR-Too-Long-Didn’t-Read"><a href="#TL-DR-Too-Long-Didn’t-Read" class="headerlink" title="TL;DR(Too Long; Didn’t Read.):"></a>TL;DR(Too Long; Didn’t Read.):</h2><blockquote>
 <p>모든 <code>compile</code>을 <code>implementation</code>으로 바꾸고 프로젝트를 빌드하세요.<br>그것이 성공적으로 잘 된다면 훌륭한 프로젝트 입니다.<br>그렇지 않으면 종속성이 있는지 찾아보고 <code>api</code>키워드를 사용하여 해당 라이브러리를 사용합시다.</p>
 </blockquote>
-]]></content>
+]]></content:encoded>
+      
+      <comments>https://sikeeoh.github.io/2017/08/28/implementation-vs-api-android-gradle-plugin-3/#disqus_thread</comments>
+    </item>
     
-    <summary type="html">
-    
-      &lt;h2 id=&quot;글에-앞서&quot;&gt;&lt;a href=&quot;#글에-앞서&quot; class=&quot;headerlink&quot; title=&quot;글에 앞서&quot;&gt;&lt;/a&gt;글에 앞서&lt;hr&gt;&lt;/h2&gt;&lt;p&gt;안녕하세요?&lt;br&gt;&lt;a href=&quot;http://web.lookpin.co.kr/&quot; target=&quot;
-    
-    </summary>
-    
-    
-      <category term="android" scheme="https://sikeeoh.github.io/tags/android/"/>
-    
-      <category term="gradle" scheme="https://sikeeoh.github.io/tags/gradle/"/>
-    
-      <category term="compile" scheme="https://sikeeoh.github.io/tags/compile/"/>
-    
-      <category term="implementation" scheme="https://sikeeoh.github.io/tags/implementation/"/>
-    
-      <category term="api" scheme="https://sikeeoh.github.io/tags/api/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>룩핀 안드로이드 Buddybuild 적용기 그리고 여러분도 적용해보자</title>
-    <link href="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/"/>
-    <id>https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/</id>
-    <published>2017-08-25T02:34:58.000Z</published>
-    <updated>2017-08-25T09:34:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="소개"><a href="#소개" class="headerlink" title="소개"></a>소개<hr></h2><p>안녕하세요?<br>룩핀에서 안드로이드 개발을 혼자 맡고 있는 오경식 이라고 합니다.<br>자세한 소개는 <a href="https://gist.github.com/sikeeoh/468a5818060b188e26b4fb9f3da1a4d4" target="_blank" rel="external">소개링크</a> 로 대체 하겠습니다.</p>
+    <item>
+      <title>룩핀 안드로이드 Buddybuild 적용기 그리고 여러분도 적용해보자</title>
+      <link>https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/</link>
+      <guid>https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/</guid>
+      <pubDate>Fri, 25 Aug 2017 02:34:58 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;소개&quot;&gt;&lt;a href=&quot;#소개&quot; class=&quot;headerlink&quot; title=&quot;소개&quot;&gt;&lt;/a&gt;소개&lt;hr&gt;&lt;/h2&gt;&lt;p&gt;안녕하세요?&lt;br&gt;룩핀에서 안드로이드 개발을 혼자 맡고 있는 오경식 이라고 합니다.&lt;br&gt;자세한 소개는 &lt;a href=
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="소개"><a href="#소개" class="headerlink" title="소개"></a>소개<hr></h2><p>안녕하세요?<br>룩핀에서 안드로이드 개발을 혼자 맡고 있는 오경식 이라고 합니다.<br>자세한 소개는 <a href="https://gist.github.com/sikeeoh/468a5818060b188e26b4fb9f3da1a4d4" target="_blank" rel="external">소개링크</a> 로 대체 하겠습니다.</p>
 <h2 id="글을-쓰게-된-계기"><a href="#글을-쓰게-된-계기" class="headerlink" title="글을 쓰게 된 계기"></a>글을 쓰게 된 계기<hr></h2><p><strong>Lookpin 안드로이드</strong> 프로젝트에 CI를 붙이려고 알아보던 도중 <a href="https://www.buddybuild.com/" target="_blank" rel="external">buddybuild</a>라는 나온지 얼마안되고 따끈따끈하고 좋은 서비스(?)라는 걸 알게 되었고 룩핀 안드로이드에 붙이게 되었습니다.<br>그나마 여러 CI서비스중 최근에 출시되고 규모가 있고 어느정도 검증된 서비스인 것 같지만 최근에 출시해서 그런지 워낙 자료가 부족 하고 한번 쯤 정리하는 것도 나쁘지 않을 것 같아서 적게 되었습니다.</p>
 <p><strong>저장소 관련 내용은 Github 기준으로 작성 되었습니다.</strong></p>
 <h2 id="buddybuild-란"><a href="#buddybuild-란" class="headerlink" title="buddybuild 란?"></a>buddybuild 란?<hr></h2><p><a href="https://www.buddybuild.com/" target="_blank" rel="external"><br><img src="https://www.buddybuild.com/images/logo-dark@2x.png"><br></a></p>
@@ -144,23 +132,10 @@
 <h2 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론<hr></h2><p>우리모두 간지나게 <strong>BuddyBuild Build status badges</strong> 달아요!</p>
 <h2 id="기타-문의"><a href="#기타-문의" class="headerlink" title="기타 문의"></a>기타 문의<hr></h2><p>혹시 잘못 된 정보나 궁금한 점이 있다면 제 <a href="https://gist.github.com/sikeeoh/468a5818060b188e26b4fb9f3da1a4d4" target="_blank" rel="external">소개링크</a><br>에 있는 메일이나 페이스북 메시지로 문의 주세요!</p>
 <p>감사합니다.</p>
-]]></content>
+]]></content:encoded>
+      
+      <comments>https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/#disqus_thread</comments>
+    </item>
     
-    <summary type="html">
-    
-      &lt;h2 id=&quot;소개&quot;&gt;&lt;a href=&quot;#소개&quot; class=&quot;headerlink&quot; title=&quot;소개&quot;&gt;&lt;/a&gt;소개&lt;hr&gt;&lt;/h2&gt;&lt;p&gt;안녕하세요?&lt;br&gt;룩핀에서 안드로이드 개발을 혼자 맡고 있는 오경식 이라고 합니다.&lt;br&gt;자세한 소개는 &lt;a href=
-    
-    </summary>
-    
-    
-      <category term="buddybuild" scheme="https://sikeeoh.github.io/tags/buddybuild/"/>
-    
-      <category term="안드로이드" scheme="https://sikeeoh.github.io/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C/"/>
-    
-      <category term="배포" scheme="https://sikeeoh.github.io/tags/%EB%B0%B0%ED%8F%AC/"/>
-    
-      <category term="룩핀" scheme="https://sikeeoh.github.io/tags/%EB%A3%A9%ED%95%80/"/>
-    
-  </entry>
-  
-</feed>
+  </channel>
+</rss>
