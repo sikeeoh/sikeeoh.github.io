@@ -97,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sikeeoh.github.io/2017/11/27/android-findviewbyid/" data-id="cjakhdh7200004q1x3hm3vbfl" class="article-share-link">Share</a>
+      <a data-url="https://sikeeoh.github.io/2017/11/27/android-findviewbyid/" data-id="cjal76rzc0003ie1xudgp93sj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/View/">View</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ViewGroup/">ViewGroup</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/findViewById/">findViewById</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/findViewTraversal/">findViewTraversal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/performance/">performance</a></li></ul>
@@ -152,7 +152,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sikeeoh.github.io/2017/09/07/bubbleseekbar-renewal/" data-id="cjakhdh7800014q1xcu31m1px" class="article-share-link">Share</a>
+      <a data-url="https://sikeeoh.github.io/2017/09/07/bubbleseekbar-renewal/" data-id="cjal76rz20000ie1xnuetp7xn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
@@ -186,7 +186,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="글에-앞서"><a href="#글에-앞서" class="headerlink" title="글에 앞서"></a>글에 앞서<hr></h2><p>안녕하세요?<br><a href="http://web.lookpin.co.kr/" target="_blank" rel="external">룩핀</a>에서 안드로이드 개발을 하고 있는 <a href="https://gist.github.com/sikeeoh/468a5818060b188e26b4fb9f3da1a4d4" target="_blank" rel="external">오경식</a> 이라고 합니다.<br>이 글은 인도 벵갈루루의 <strong>Bedanta Bikash Borah</strong>님이 Medium에 올린 <a href="https://blog.mindorks.com/implementation-vs-api-in-gradle-3-0-494c817a6fa" target="_blank" rel="external">Implementation Vs Api in Android Gradle plugin</a> 라는 글을 번역해서 만들었습니다.<br>번역하면서 읽으시는 분들이 편하게 느끼기 위해 원글과 아주 약간의 어투 및 기타 차이가 있을 수 있습니다.<br>번역을 흔쾌히 허락해주신 Bedanta Bikash Borah님께 감사하다는 말씀 드립니다.<br>또한 번역이 미흡해 번역의 질이 낮게 느껴질 수 있을텐데 많은 조언 부탁드립니다.<br>부족한 번역 글 읽어주셔서 감사합니다.<br><img src="/css/images/20170828/sure.png" alt="승낙"></p>
+        <p>최초 작성일 : 2017-08-28 17:23:49<br>최종 수정 : 2017-11-29</p>
+<h2 id="글에-앞서"><a href="#글에-앞서" class="headerlink" title="글에 앞서"></a>글에 앞서</h2><p>안녕하세요?<br><a href="http://web.lookpin.co.kr/" target="_blank" rel="external">룩핀</a>에서 안드로이드 개발을 하고 있는 <a href="https://gist.github.com/sikeeoh/468a5818060b188e26b4fb9f3da1a4d4" target="_blank" rel="external">오경식</a> 이라고 합니다.<br>이 글은 인도 벵갈루루의 <strong>Bedanta Bikash Borah</strong>님이 Medium에 올린 <a href="https://blog.mindorks.com/implementation-vs-api-in-gradle-3-0-494c817a6fa" target="_blank" rel="external">Implementation Vs Api in Android Gradle plugin</a> 라는 글을 번역해서 만들었습니다.<br>번역하면서 읽으시는 분들이 편하게 느끼기 위해 원글과 아주 약간의 어투 및 기타 차이가 있을 수 있습니다.<br>번역을 흔쾌히 허락해주신 Bedanta Bikash Borah님께 감사하다는 말씀 드립니다.<br>또한 번역이 미흡해 번역의 질이 낮게 느껴질 수 있을텐데 많은 조언 부탁드립니다.<br>부족한 번역 글 읽어주셔서 감사합니다.<br><img src="/css/images/20170828/sure.png" alt="승낙"></p>
 <h2 id="Implementation-Vs-Api-in-Android-Gradle-plugin-3-0"><a href="#Implementation-Vs-Api-in-Android-Gradle-plugin-3-0" class="headerlink" title="Implementation Vs Api in Android Gradle plugin 3.0"></a>Implementation Vs Api in Android Gradle plugin 3.0<hr></h2><p><img src="/css/images/20170828/1.png" alt=""></p>
 <p>나는 프로젝트에서 Android Gradle 플러그인 3.0을 사용하는 동안 <code>compile</code> 키워드가 Deprecated 되었고  새롭게 나온 <code>implementation</code> 과 <code>api</code>를 위해 더 이상 <code>compile</code>이 추후에 사용되지 않는 것으로 되었습니다.<br>위 두 가지 모두 예제를 통해 이해 해 보도록 하겠습니다.</p>
 <p><em>샘플 어플(kotlin)은 <a href="https://github.com/iamBedant/ApiVsImplementation" target="_blank" rel="external">여기</a>있습니다.</em></p>
@@ -212,7 +213,10 @@
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassB</span> </span>&#123;</div><div class="line">	<span class="keyword">val</span> b = ClassD()</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">fun</span> <span class="title">whereIsMyJoke</span><span class="params">()</span></span>: String &#123;</div><div class="line">		<span class="keyword">return</span> b.tellMeAJoke()</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>LibraryA:</strong></p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassA</span> </span>&#123;</div><div class="line">	<span class="keyword">val</span> c = ClassC()</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">fun</span> <span class="title">whereIsMyJoke</span><span class="params">()</span></span>: String &#123;</div><div class="line">		<span class="keyword">return</span> c.tellMeAJoke()</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>위의 클래스 파일에서 <strong>LibraryA</strong> 및 <strong>LibraryB</strong>는 각각 <strong>LibraryC</strong> 그리고 <strong>LibraryD</strong>에 종속된다는 것을 알 수 있습니다.<br>따라서 build.gradle 파일에 이러한 종속성을 추가 해줘야 합니다.</p>
+<p>위의 클래스 파일에서 <strong>LibraryA</strong> 및 <strong>LibraryB</strong>는 각각 <strong>LibraryC</strong> 그리고 <strong>LibraryD</strong>에 종속된다는 것을 알 수 있습니다.</p>
+<p><strong>LibraryA</strong> -&gt; <strong>LibraryC</strong></p>
+<p><strong>LibraryB</strong> -&gt; <strong>LibraryD</strong></p>
+<p>따라서 build.gradle 파일에 이러한 종속성을 추가 해줘야 합니다.</p>
 <h3 id="Compile-2-0-or-Api-3-0"><a href="#Compile-2-0-or-Api-3-0" class="headerlink" title="Compile (2.0) or Api (3.0):"></a>Compile (2.0) or Api (3.0):</h3><p>새로운 <code>api</code> 키워드는 이전 <code>compile</code> 키워드와 정확히 동일 합니다.<br>따라서 모든 <code>compile</code>을 <code>api</code>로 바꿔도 제대로 동작합니다.<br>이제 <strong>LibraryB</strong>에서 <code>api</code> 키워드를 사용하여 <strong>LibraryD</strong>의 의존성을 추가해 보겠습니다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line">	. . . .</div><div class="line">	api project(path: &apos;:librayD&apos;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>마찬가지로 <strong>LibraryB</strong> 가 App module에 추가 됩니다.</p>
@@ -234,14 +238,17 @@
 <h3 id="Full-Build"><a href="#Full-Build" class="headerlink" title="Full Build:"></a>Full Build:</h3><p><img src="/css/images/20170828/full_build.png" alt="Full Build"></p>
 <h3 id="Change-in-LibraryD"><a href="#Change-in-LibraryD" class="headerlink" title="Change in LibraryD:"></a>Change in LibraryD:</h3><p><img src="/css/images/20170828/change_in_libraryd.png" alt="Change in LibraryD"></p>
 <h3 id="Change-in-LibraryC"><a href="#Change-in-LibraryC" class="headerlink" title="Change in LibraryC:"></a>Change in LibraryC:</h3><p><img src="/css/images/20170828/change_in_libraryc.png" alt="Change in LibraryC"></p>
+<h2 id="api-와-implementation에-대한-요약-설명"><a href="#api-와-implementation에-대한-요약-설명" class="headerlink" title="api 와 implementation에 대한 요약 설명"></a>api 와 implementation에 대한 요약 설명</h2><p><code>api</code>는 의존성에 추가하는 모듈이 의존하고 있는 다른 모듈 까지 접근이 가능합니다.<br>예 ) ModuleX 에서 LibraryA 를 <code>api project(path: &#39;:LibrayA&#39;)</code>로 의존성에 추가하면 ModuleX에서 LibraryC 클래스를 접근 할 수 있습니다.</p>
+<p><code>implementation</code>는 의존성에 추가하는 모듈 외 추가하는 모듈이 의존하는 다른 모듈에는 접근이 불가능 합니다. 즉 위에 상황을 보자면 <code>implementation project(path: &#39;:LibraryA&#39;)</code>로 의존성에 추가하면 ModuleX에서 LibraryC 클래스에는 접근할 수 없습니다.</p>
+<p>위에서 보았듯이 이로 인한 차이가 발생하여 빌드 속도의 개선이 있을 수 있습니다.<br>다시 한번 미흡한 글 읽어주셔서 감사합니다.</p>
 <h2 id="TL-DR-Too-Long-Didn’t-Read"><a href="#TL-DR-Too-Long-Didn’t-Read" class="headerlink" title="TL;DR(Too Long; Didn’t Read.):"></a>TL;DR(Too Long; Didn’t Read.):</h2><blockquote>
-<p>모든 <code>compile</code>을 <code>implementation</code>으로 바꾸고 프로젝트를 빌드하세요.<br>그것이 성공적으로 잘 된다면 훌륭한 프로젝트 입니다.<br>그렇지 않으면 종속성이 있는지 찾아보고 <code>api</code>키워드를 사용하여 해당 라이브러리를 사용합시다.</p>
+<p>모든 <code>compile</code>을 <code>implementation</code>으로 바꾸고 프로젝트를 빌드해보세요.<br>만일 여러분이 성공적으로 잘 된다면 훌륭한 프로젝트 입니다.<br>그렇지 않으면 종속성이 있는지 찾아보고 <code>api</code>키워드를 사용하여 해당 라이브러리를 사용합시다.</p>
 </blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sikeeoh.github.io/2017/08/28/implementation-vs-api-android-gradle-plugin-3/" data-id="cjakhdh7d00034q1x2lj3rwm6" class="article-share-link">Share</a>
+      <a data-url="https://sikeeoh.github.io/2017/08/28/implementation-vs-api-android-gradle-plugin-3/" data-id="cjal76rz70001ie1x74xyd4ge" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/api/">api</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/compile/">compile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gradle/">gradle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/implementation/">implementation</a></li></ul>
@@ -322,7 +329,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/" data-id="cjakhdh7e00044q1xq17w9zmy" class="article-share-link">Share</a>
+      <a data-url="https://sikeeoh.github.io/2017/08/25/lookpin-android-buddybuild/" data-id="cjal76rzc0004ie1xreu5x1p3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/buddybuild/">buddybuild</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/룩핀/">룩핀</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/배포/">배포</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/안드로이드/">안드로이드</a></li></ul>
