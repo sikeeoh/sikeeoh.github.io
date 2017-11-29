@@ -124,7 +124,7 @@
 <p>이제 App module에서 LibraryC에 접근하려고 시도하면 Android Studio에서 오류가 발생합니다.</p>
 <p><img src="/css/images/20170828/app_module_access_error.png" alt=""></p>
 <p>이는 우리가 <code>api</code> 대신 <code>implementation</code>을 사용한다면 App module에서 <strong>LibraryC</strong>에 직접 접근 할 수 없다는 것을 의미합니다.<br>그래서 <code>implementation</code>을 사용함으로써 이득은 무엇일까요?</p>
-<h3 id="Implementation-vs-api"><a href="#Implementation-vs-api" class="headerlink" title="Implementation vs api:"></a>Implementation vs api:</h3><p>첫 번째 시나리오에서 <strong>LibraryD</strong>는 <code>api</code>를 사용하여 컴파일 됩니다.<br><strong>LibraryD</strong> 내부에서 변경이 되면, Gradle은  <strong>LibraryD</strong>, <strong>LibraryB</strong> 및 <strong>LibraryB</strong>를 import하는 다른 모든 모듈을 재 컴파일 해야 합니다.</p>
+<h3 id="Implementation-vs-api"><a href="#Implementation-vs-api" class="headerlink" title="Implementation vs api:"></a>Implementation vs api:</h3><p>첫 번째 시나리오에서 <strong>LibraryD</strong>는 <code>api</code>를 사용하여 컴파일 됩니다.<br><strong>LibraryD</strong> 내부에서 변경이 되면, Gradle은  <strong>LibraryD</strong>, <strong>LibraryB</strong> 및 <strong>LibraryB</strong>를 import하는 다른 모든 모듈(Module X)을 재 컴파일 해야 합니다.</p>
 <p><img src="/css/images/20170828/first_scenario.png" alt="첫번째 시나리오"></p>
 <p>그러나 두 번째 시나리오에서 <strong>LibraryC</strong>가 내부적으로 변경이 되면 Gradle은 <strong>LibraryC</strong> 및 <strong>LibraryA</strong>만 다시 컴파일 하면 됩니다.<br>App module 에서는 <strong>LibraryC</strong>를 직접 가져오지 못하고 또한 다른 클래스들은  <strong>LibraryC</strong>안에 구현 된 것들을 직접 사용 할 수 없으니까요.</p>
 <p><img src="/css/images/20170828/second_scenario.png" alt="두번째 시나리오"></p>
